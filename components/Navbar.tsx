@@ -23,6 +23,25 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const sections = navLinks
+      .map((link) => document.querySelector(link.href))
+      .filter((el): el is Element => el !== null);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting);
+        if (visible.length > 0) {
+          setActive(`#${visible[0].target.id}`);
+        }
+      },
+      { rootMargin: "-40% 0px -50% 0px", threshold: 0 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <motion.nav
       initial={{ y: -80, opacity: 0 }}
@@ -53,13 +72,18 @@ export default function Navbar() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * i + 0.3 }}
               onClick={() => setActive(link.href)}
+              aria-current={active === link.href ? "true" : undefined}
               className={`font-mono text-xs tracking-widest uppercase transition-all duration-200 relative group ${
                 active === link.href ? "text-[#00f0ff]" : "text-slate-400 hover:text-[#00f0ff]"
               }`}
             >
               <span className="text-[#00f0ff] mr-1 opacity-60">0{i + 1}.</span>
               {link.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-[#00f0ff] group-hover:w-full transition-all duration-300" />
+              <span
+                className={`absolute -bottom-1 left-0 h-px bg-[#00f0ff] transition-all duration-300 ${
+                  active === link.href ? "w-full" : "w-0 group-hover:w-full"
+                }`}
+              />
             </motion.a>
           ))}
           <motion.a
@@ -78,6 +102,8 @@ export default function Navbar() {
         <button
           className="md:hidden text-[#00f0ff] p-2"
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
         >
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -97,13 +123,27 @@ export default function Navbar() {
                 <a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMenuOpen(false)}
-                  className="font-mono text-sm text-slate-400 hover:text-[#00f0ff] transition-colors"
+                  onClick={() => {
+                    setActive(link.href);
+                    setMenuOpen(false);
+                  }}
+                  aria-current={active === link.href ? "true" : undefined}
+                  className={`font-mono text-sm transition-colors ${
+                    active === link.href ? "text-[#00f0ff]" : "text-slate-400 hover:text-[#00f0ff]"
+                  }`}
                 >
                   <span className="text-[#00f0ff] mr-2">0{i + 1}.</span>
                   {link.label}
                 </a>
               ))}
+              <a
+                href="/Thamindu_CV.pdf"
+                download
+                onClick={() => setMenuOpen(false)}
+                className="btn-neon text-xs px-4 py-2 w-fit mt-2"
+              >
+                Resume
+              </a>
             </div>
           </motion.div>
         )}

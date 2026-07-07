@@ -15,7 +15,7 @@ export default function Footer() {
           Built with Next.js · Tailwind CSS · Framer Motion · Dark neon vibes
         </p>
         <p className="font-mono text-xs text-slate-600">
-          © 2025 Thamindu Senanayake
+          © {new Date().getFullYear()} Thamindu Senanayake
         </p>
       </div>
     </footer>

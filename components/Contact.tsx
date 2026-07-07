@@ -9,8 +9,8 @@ const socials = [
   {
     icon: GithubIcon,
     label: "GitHub",
-    value: "github.com/ftthadiya",
-    href: "https://github.com/ftthadiya",
+    value: "github.com/FTthadiya",
+    href: "https://github.com/FTthadiya",
     color: "#00f0ff",
   },
   {
@@ -164,47 +164,56 @@ export default function Contact() {
 
               <form onSubmit={handleSubmit} className="p-6 space-y-4">
                 <div>
-                  <label className="font-mono text-xs text-[#00f0ff] mb-2 block">
-                    $ your_name
+                  <label htmlFor="contact-name" className="font-mono text-xs text-[#00f0ff] mb-2 block">
+                    $ your_name <span className="text-[#ff0080]">*</span>
                   </label>
                   <input
+                    id="contact-name"
+                    name="name"
                     type="text"
                     required
+                    autoComplete="name"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     placeholder="John Doe"
-                    className="w-full bg-[#050508] border border-[#00f0ff]/20 rounded-lg px-4 py-3 text-slate-300 font-mono text-sm placeholder-slate-600 focus:outline-none focus:border-[#00f0ff]/60 transition-colors"
+                    className="w-full bg-[#050508] border border-[#00f0ff]/20 rounded-lg px-4 py-3 text-slate-300 font-mono text-sm placeholder-slate-600 focus:outline-none focus:border-[#00f0ff]/60 focus:ring-2 focus:ring-[#00f0ff]/30 transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="font-mono text-xs text-[#00f0ff] mb-2 block">
-                    $ your_email
+                  <label htmlFor="contact-email" className="font-mono text-xs text-[#00f0ff] mb-2 block">
+                    $ your_email <span className="text-[#ff0080]">*</span>
                   </label>
                   <input
+                    id="contact-email"
+                    name="email"
                     type="email"
                     required
+                    autoComplete="email"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                     placeholder="john@example.com"
-                    className="w-full bg-[#050508] border border-[#00f0ff]/20 rounded-lg px-4 py-3 text-slate-300 font-mono text-sm placeholder-slate-600 focus:outline-none focus:border-[#00f0ff]/60 transition-colors"
+                    className="w-full bg-[#050508] border border-[#00f0ff]/20 rounded-lg px-4 py-3 text-slate-300 font-mono text-sm placeholder-slate-600 focus:outline-none focus:border-[#00f0ff]/60 focus:ring-2 focus:ring-[#00f0ff]/30 transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="font-mono text-xs text-[#00f0ff] mb-2 block">
-                    $ message
+                  <label htmlFor="contact-message" className="font-mono text-xs text-[#00f0ff] mb-2 block">
+                    $ message <span className="text-[#ff0080]">*</span>
                   </label>
                   <textarea
+                    id="contact-message"
+                    name="message"
                     required
                     rows={5}
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     placeholder="Hey Thamindu, I'd like to..."
-                    className="w-full bg-[#050508] border border-[#00f0ff]/20 rounded-lg px-4 py-3 text-slate-300 font-mono text-sm placeholder-slate-600 focus:outline-none focus:border-[#00f0ff]/60 transition-colors resize-none"
+                    className="w-full bg-[#050508] border border-[#00f0ff]/20 rounded-lg px-4 py-3 text-slate-300 font-mono text-sm placeholder-slate-600 focus:outline-none focus:border-[#00f0ff]/60 focus:ring-2 focus:ring-[#00f0ff]/30 transition-colors resize-none"
                   />
                 </div>
                 <button
                   type="submit"
                   className="btn-neon btn-neon-filled w-full flex items-center justify-center gap-2"
+                  aria-live="polite"
                 >
                   <Send size={14} />
                   {sent ? "Opening mail client..." : "Send Message"}

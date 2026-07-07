@@ -7,75 +7,155 @@ import { GithubIcon } from "./GithubIcon";
 
 const projects = [
   {
-    title: "Appointment Booking & Management System",
+    title: "Early — Appointment Booking System",
     period: "2025 — Present",
     status: "In Progress",
     statusColor: "#00ff88",
     description:
-      "A service-based booking platform with full-stack architecture. RESTful APIs for scheduling, availability management, and booking tracking. Mobile-first design with a Flutter client app.",
+      "Full-stack appointment booking platform with a Flutter mobile client and a TypeScript/Node.js backend. Handles scheduling, availability management, booking tracking, and role-based access for both customers and service providers.",
     highlights: [
-      "Node.js (Express.js) backend with RESTful API design",
-      "Authentication and Role-Based Access Control (RBAC)",
-      "Designed database schemas for users, services, and appointments",
-      "Flutter mobile application for customers and service providers",
+      "Flutter mobile app for customers and service providers (Dart)",
+      "Node.js + TypeScript REST API backend with Express.js",
+      "JWT-based authentication and Role-Based Access Control (RBAC)",
+      "Relational database schema for users, services, and appointments",
+      "Cross-platform: iOS, Android, and Web via Flutter",
     ],
-    tags: ["Node.js", "Express.js", "Flutter", "REST API", "RBAC", "MongoDB"],
+    tags: ["Flutter", "Dart", "TypeScript", "Node.js", "Express.js", "REST API", "RBAC", "JWT"],
     color: "#00f0ff",
-    github: "https://github.com/ftthadiya",
+    github: "https://github.com/FTthadiya/Early_App",
     demo: null,
   },
   {
-    title: "TTLABS — MERN Resource Management System",
+    title: "Alimankada 2026 — National Summit Website",
+    period: "2026",
+    status: "Completed",
+    statusColor: "#00f0ff",
+    description:
+      "Official website for the Alimankada 2026 National Summit. Features delegate registration, event agenda, speaker profiles, research article publishing, and a full admin dashboard to manage summit participation data.",
+    highlights: [
+      "Next.js 14 with App Router and server-side rendering",
+      "Delegate registration system with form validation",
+      "Admin dashboard for managing participants and submissions",
+      "Research article publishing and speaker profile pages",
+      "Responsive UI with Tailwind CSS",
+    ],
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "React", "SSR", "Admin Dashboard"],
+    color: "#bf00ff",
+    github: "https://github.com/FTthadiya/AlimankadaSummit",
+    demo: null,
+  },
+  {
+    title: "TTLABS — MERN Resource Management",
     period: "2023 — 2024",
     status: "Completed",
     statusColor: "#00f0ff",
     description:
-      "Full-stack MERN application for resource management with enterprise-grade security. Agile iterative development with automated CI/CD and test pipelines.",
+      "Enterprise-grade full-stack MERN application for resource management with secure authentication, CI/CD pipelines, and Agile-driven iterative releases. Containerised with Docker for consistent deployment.",
     highlights: [
-      "Full-stack MERN (MongoDB, Express, React, Node.js)",
+      "Full-stack MERN (MongoDB, Express.js, React.js, Node.js)",
       "Secure REST APIs with RBAC and OTP-based authentication",
-      "Implemented CI/CD pipelines and automated testing workflows",
-      "Led Agile-based iterative releases",
+      "Containerised with Docker and Docker Compose",
+      "CI/CD pipelines with automated testing workflows",
+      "Led Agile-based iterative sprint releases",
     ],
-    tags: ["MongoDB", "Express.js", "React.js", "Node.js", "CI/CD", "OTP Auth"],
-    color: "#bf00ff",
-    github: "https://github.com/ftthadiya",
+    tags: ["MongoDB", "Express.js", "React.js", "Node.js", "Docker", "CI/CD", "OTP Auth", "RBAC"],
+    color: "#ff0080",
+    github: "https://github.com/FTthadiya/TTLABS",
+    demo: null,
+  },
+  {
+    title: "Enterprise Application — ASP.NET Core",
+    period: "2026",
+    status: "Completed",
+    statusColor: "#00f0ff",
+    description:
+      "Enterprise web application built with ASP.NET Core as part of coursework on enterprise systems design. Covers multi-tier architecture, data management, and server-side rendered UI with C# backend logic.",
+    highlights: [
+      "ASP.NET Core MVC architecture with C# backend",
+      "HTML/CSS/JavaScript frontend with server-side rendering",
+      "Multi-tier enterprise application design patterns",
+      "Database integration and data management layer",
+      "RESTful service endpoints and form handling",
+    ],
+    tags: ["ASP.NET Core", "C#", "HTML", "CSS", "JavaScript", "MVC", "Entity Framework"],
+    color: "#00ff88",
+    github: "https://github.com/FTthadiya/CW1-enterprise-applications",
+    demo: null,
+  },
+  {
+    title: "Arrow Escape — 2D Puzzle Game",
+    period: "2026",
+    status: "Completed",
+    statusColor: "#00f0ff",
+    description:
+      "A 2D puzzle/escape game built in C#. Players navigate arrow-based mechanics through increasingly complex levels. Focused on clean game logic, state management, and modular level design.",
+    highlights: [
+      "Built entirely in C# with object-oriented game logic",
+      "Arrow-based movement and collision detection systems",
+      "Modular level design for easy extensibility",
+      "State machine for game flow and level progression",
+      "Clean separation of game logic and rendering",
+    ],
+    tags: ["C#", "Game Dev", "OOP", "State Machine", "2D"],
+    color: "#00f0ff",
+    github: "https://github.com/FTthadiya/ArrowEscape",
     demo: null,
   },
   {
     title: "2D Maze Puzzle Engine",
-    period: "2023",
+    period: "2024",
     status: "Completed",
     statusColor: "#00f0ff",
     description:
-      "A modular Java-based puzzle engine featuring a custom domain-specific language (DSL) for defining maze rules and layouts, with Jython scripting for runtime extensibility.",
+      "A modular Java-based puzzle engine featuring a custom Domain-Specific Language (DSL) for defining maze rules and layouts, with Jython scripting for runtime extensibility. Designed for clean architecture and plugin-based extensions.",
     highlights: [
-      "Modular Java engine with plugin architecture",
+      "Modular Java engine with plugin-based architecture",
       "Custom DSL for defining maze rules and layouts",
-      "Integrated Jython scripting for runtime extensibility",
-      "Designed for extensibility and clean separation of concerns",
+      "Jython (Python in Java) scripting for runtime extensibility",
+      "Clean separation of engine, rules, and rendering layers",
+      "Designed for scalable extensibility and maintainability",
     ],
-    tags: ["Java", "DSL", "Jython", "Plugin Architecture"],
-    color: "#ff0080",
-    github: "https://github.com/ftthadiya",
+    tags: ["Java", "DSL", "Jython", "Plugin Architecture", "OOP", "Design Patterns"],
+    color: "#bf00ff",
+    github: "https://github.com/FTthadiya/COMP2003",
     demo: null,
   },
   {
-    title: "Air Traffic Simulation System",
-    period: "2022",
+    title: "Distributed Computing System",
+    period: "2024",
     status: "Completed",
     statusColor: "#00f0ff",
     description:
-      "A concurrent Java simulation of air traffic control systems. Demonstrates deep understanding of multithreading, thread pools, and safe concurrent resource access patterns.",
+      "A distributed computing coursework project built in C# demonstrating distributed system principles: message passing, concurrency control, remote communication, and fault tolerance in a networked application.",
+    highlights: [
+      "C# distributed system with remote communication",
+      "Message passing and inter-process coordination",
+      "Concurrency control and thread-safe resource access",
+      "Fault tolerance and error recovery mechanisms",
+      "Designed around distributed systems theory and patterns",
+    ],
+    tags: ["C#", ".NET", "Distributed Systems", "Concurrency", "Networking", "Message Passing"],
+    color: "#ff0080",
+    github: "https://github.com/FTthadiya/COMP3008",
+    demo: null,
+  },
+  {
+    title: "Air Traffic Simulation",
+    period: "2024",
+    status: "Completed",
+    statusColor: "#00f0ff",
+    description:
+      "A concurrent Java simulation of air traffic control systems demonstrating deep understanding of multithreading, thread pools, and safe concurrent resource access patterns at scale.",
     highlights: [
       "Concurrent backend simulation with Java multithreading",
       "Thread pools and blocking queues for safe resource management",
-      "Thread safety and efficient task scheduling",
+      "Thread-safe scheduling and task coordination",
       "Scalable design for high-throughput simulation scenarios",
+      "Applied design patterns: Producer-Consumer, Thread Pool",
     ],
-    tags: ["Java", "Concurrency", "Thread Pools", "Blocking Queues", "Simulation"],
+    tags: ["Java", "Concurrency", "Thread Pools", "Blocking Queues", "Simulation", "Design Patterns"],
     color: "#00ff88",
-    github: "https://github.com/ftthadiya",
+    github: "https://github.com/FTthadiya/COMP3003",
     demo: null,
   },
 ];
@@ -100,7 +180,7 @@ export default function Projects() {
             <div className="h-px flex-1 max-w-48 bg-gradient-to-r from-[#00f0ff]/40 to-transparent" />
           </div>
           <p className="text-slate-400 text-sm ml-8">
-            Things I&apos;ve built — from distributed systems to full-stack apps
+            Things I&apos;ve built — from distributed systems to full-stack apps and games
           </p>
         </motion.div>
 
@@ -110,7 +190,7 @@ export default function Projects() {
               key={project.title}
               initial={{ opacity: 0, y: 40 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
               className="group bg-[#0a0a12] rounded-xl overflow-hidden card-hover relative"
               style={{ border: `1px solid ${project.color}20` }}
             >
@@ -215,7 +295,7 @@ export default function Projects() {
           className="text-center mt-12"
         >
           <a
-            href="https://github.com/ftthadiya"
+            href="https://github.com/FTthadiya"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-neon inline-flex items-center gap-2"
