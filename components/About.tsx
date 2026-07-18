@@ -13,7 +13,7 @@ const highlights = [
 
 const stats = [
   { value: "1.5+", label: "Years Experience" },
-  { value: "9+", label: "Projects Built" },
+  { value: "10+", label: "Projects Built" },
   { value: "10+", label: "Technologies" },
   { value: "MSc", label: "Advanced SE" },
 ];
