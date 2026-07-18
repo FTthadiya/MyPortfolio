@@ -16,8 +16,8 @@ const socials = [
   {
     icon: LinkedinIcon,
     label: "LinkedIn",
-    value: "linkedin.com/in/thamindusenanayake",
-    href: "https://linkedin.com/in/thamindusenanayake",
+    value: "linkedin.com/in/thamindusenanyake",
+    href: "https://www.linkedin.com/in/thamindusenanyake/",
     color: "#bf00ff",
   },
   {
