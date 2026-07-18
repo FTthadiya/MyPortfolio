@@ -2,15 +2,20 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Terminal } from "lucide-react";
-import { GithubIcon } from "./GithubIcon";
+import { WhatsappIcon } from "./GithubIcon";
 
 const navLinks = [
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
+  { label: "Skills", href: "#skills" },
   { label: "Contact", href: "#contact" },
 ];
+
+const WHATSAPP_NUMBER = "";
+const whatsappHref = WHATSAPP_NUMBER
+  ? `https://wa.me/${WHATSAPP_NUMBER}`
+  : undefined;
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -56,14 +61,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#hero" className="flex items-center gap-2 group">
-          <Terminal size={18} className="text-[#00f0ff]" />
+          <Terminal size={18} className="text-[#00f0ff] group-hover:-rotate-12 transition-transform duration-300" />
           <span className="font-mono text-sm font-bold text-[#00f0ff] tracking-widest group-hover:text-white transition-colors">
             TS<span className="text-[#bf00ff]">.</span>dev
           </span>
         </a>
 
         {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           {navLinks.map((link, i) => (
             <motion.a
               key={link.href}
@@ -86,21 +91,25 @@ export default function Navbar() {
               />
             </motion.a>
           ))}
-          <motion.a
-            href="/Thamindu_CV.pdf"
-            download
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-            className="btn-neon text-xs px-4 py-2"
-          >
-            Resume
-          </motion.a>
+          {whatsappHref && (
+            <motion.a
+              href={whatsappHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat on WhatsApp"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8 }}
+              className="text-[#00ff88] hover:text-white hover:rotate-12 transition-all duration-300"
+            >
+              <WhatsappIcon size={20} />
+            </motion.a>
+          )}
         </div>
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-[#00f0ff] p-2"
+          className="lg:hidden text-[#00f0ff] p-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
@@ -116,7 +125,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#0a0a12]/95 backdrop-blur-xl border-b border-[#00f0ff]/10"
+            className="lg:hidden bg-[#0a0a12]/95 backdrop-blur-xl border-b border-[#00f0ff]/10"
           >
             <div className="flex flex-col gap-4 px-6 py-6">
               {navLinks.map((link, i) => (
@@ -136,14 +145,18 @@ export default function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <a
-                href="/Thamindu_CV.pdf"
-                download
-                onClick={() => setMenuOpen(false)}
-                className="btn-neon text-xs px-4 py-2 w-fit mt-2"
-              >
-                Resume
-              </a>
+              {whatsappHref && (
+                <a
+                  href={whatsappHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setMenuOpen(false)}
+                  className="flex items-center gap-2 text-[#00ff88] font-mono text-sm mt-2"
+                >
+                  <WhatsappIcon size={18} />
+                  WhatsApp
+                </a>
+              )}
             </div>
           </motion.div>
         )}

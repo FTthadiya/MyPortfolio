@@ -270,7 +270,7 @@ export default function Projects() {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-slate-500 hover:text-[#00f0ff] transition-colors"
+                        className="text-slate-500 hover:text-[#00f0ff] hover:rotate-12 transition-all duration-300"
                       >
                         <GithubIcon size={18} />
                       </a>
@@ -280,7 +280,7 @@ export default function Projects() {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-slate-500 hover:text-[#00f0ff] transition-colors"
+                        className="text-slate-500 hover:text-[#00f0ff] hover:rotate-12 transition-all duration-300"
                       >
                         <ExternalLink size={18} />
                       </a>

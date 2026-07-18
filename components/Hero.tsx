@@ -186,7 +186,10 @@ export default function Hero() {
                   aria-label={label}
                   className="group flex items-center gap-2 text-slate-500 hover:text-[#00f0ff] transition-all duration-300"
                 >
-                  <Icon size={20} className="group-hover:drop-shadow-[0_0_8px_#00f0ff]" />
+                  <Icon
+                    size={20}
+                    className="group-hover:drop-shadow-[0_0_8px_#00f0ff] group-hover:rotate-12 transition-transform duration-300"
+                  />
                   <span className="font-mono text-xs opacity-0 group-hover:opacity-100 transition-opacity">
                     {label}
                   </span>

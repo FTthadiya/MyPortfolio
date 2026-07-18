@@ -122,7 +122,7 @@ export default function About() {
                   transition={{ delay: 0.3 + i * 0.1 }}
                   className="bg-[#0a0a12] neon-border-cyan rounded-lg p-4 card-hover group"
                 >
-                  <Icon size={20} className="text-[#00f0ff] mb-3 group-hover:drop-shadow-[0_0_8px_#00f0ff] transition-all" />
+                  <Icon size={20} className="text-[#00f0ff] mb-3 group-hover:drop-shadow-[0_0_8px_#00f0ff] group-hover:rotate-12 transition-all duration-300" />
                   <div className="font-semibold text-white text-sm mb-1">{label}</div>
                   <div className="text-slate-500 text-xs font-mono">{desc}</div>
                 </motion.div>
