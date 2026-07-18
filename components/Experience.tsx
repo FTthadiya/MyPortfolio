@@ -95,7 +95,7 @@ export default function Experience() {
           className="mb-16"
         >
           <div className="flex items-center gap-4 mb-4">
-            <span className="font-mono text-[#00f0ff] text-sm tracking-widest">03.</span>
+            <span className="font-mono text-[#00f0ff] text-sm tracking-widest">02.</span>
             <h2 className="text-3xl lg:text-4xl font-black text-white">Experience</h2>
             <div className="h-px flex-1 max-w-48 bg-gradient-to-r from-[#00f0ff]/40 to-transparent" />
           </div>
