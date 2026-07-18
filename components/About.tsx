@@ -13,7 +13,7 @@ const highlights = [
 
 const stats = [
   { value: "1.5+", label: "Years Experience" },
-  { value: "4+", label: "Projects Built" },
+  { value: "9+", label: "Projects Built" },
   { value: "10+", label: "Technologies" },
   { value: "MSc", label: "Advanced SE" },
 ];
@@ -71,6 +71,7 @@ export default function About() {
                       <div><span className="text-[#00f0ff]">name:</span> <span className="text-[#00ff88]">&quot;Thamindu Senanayake&quot;</span>,</div>
                       <div><span className="text-[#00f0ff]">location:</span> <span className="text-[#00ff88]">&quot;Kandy, Sri Lanka&quot;</span>,</div>
                       <div><span className="text-[#00f0ff]">role:</span> <span className="text-[#00ff88]">&quot;Software Engineer&quot;</span>,</div>
+                      <div><span className="text-[#00f0ff]">founderOf:</span> <span className="text-[#00ff88]">&quot;Tan Digitals&quot;</span>,</div>
                       <div><span className="text-[#00f0ff]">focus:</span> <span className="text-[#00ff88]">[&quot;Backend&quot;, &quot;DevOps&quot;, &quot;Systems&quot;]</span>,</div>
                       <div><span className="text-[#00f0ff]">education:</span> <span className="text-[#00ff88]">&quot;MSc @ IIT/Westminster&quot;</span>,</div>
                       <div><span className="text-[#00f0ff]">available:</span> <span className="text-[#00ff88]">true</span></div>
@@ -87,6 +88,9 @@ export default function About() {
               </p>
               <p>
                 Currently working as an <span className="text-[#bf00ff]">Application Support Engineer at VitalHub Innovations Lab</span> (Canada, remote), where I automate CI/CD pipelines, manage Kubernetes workloads, and troubleshoot distributed systems at scale.
+              </p>
+              <p>
+                Alongside that, I run <span className="text-[#ff0080]">Tan Digitals</span>, my own web design & development studio — building and shipping client websites end-to-end, from design to deployment.
               </p>
               <p>
                 Pursuing an <span className="text-[#00ff88]">MSc in Advanced Software Engineering</span> at IIT – University of Westminster, UK, while actively expanding expertise in Spring Boot and Go-based backend development.

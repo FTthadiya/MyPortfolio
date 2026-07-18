@@ -7,6 +7,21 @@ import { Briefcase, GraduationCap, MapPin, Calendar } from "lucide-react";
 const experiences = [
   {
     type: "work",
+    role: "Founder",
+    company: "Tan Digitals",
+    location: "Remote — Sri Lanka",
+    period: "2025 — Present",
+    color: "#ff0080",
+    points: [
+      "Founded and run Tan Digitals, a web design & development studio for small businesses and startups",
+      "Own the full delivery pipeline end-to-end: design, frontend build, deployment, and client handoff",
+      "Built and ship the agency's own site, tandigital.com, as the primary client-facing showcase",
+      "Handle client relationships, project scoping, and business development alongside development work",
+    ],
+    tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Web Design", "Client Delivery"],
+  },
+  {
+    type: "work",
     role: "Application Support Engineer",
     company: "VitalHub Innovations Lab",
     location: "Canada (Sri Lanka — Remote)",

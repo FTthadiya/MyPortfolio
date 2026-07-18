@@ -26,6 +26,24 @@ const projects = [
     demo: null,
   },
   {
+    title: "Tan Digitals — Agency Website",
+    period: "2025 — Present",
+    status: "Live",
+    statusColor: "#00ff88",
+    description:
+      "Company website for Tan Digitals, the web design & development studio I founded. Showcases services, client work, and a contact funnel for new business inquiries.",
+    highlights: [
+      "Designed and built the full site in Next.js and Tailwind CSS",
+      "Showcases agency services and a portfolio of client work",
+      "Deployed and maintained independently as the studio's primary web presence",
+      "Integrated contact/inquiry flow for lead generation",
+    ],
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Agency", "Web Design"],
+    color: "#bf00ff",
+    github: null,
+    demo: "https://tandigital.com",
+  },
+  {
     title: "Alimankada 2026 — National Summit Website",
     period: "2026",
     status: "Completed",
