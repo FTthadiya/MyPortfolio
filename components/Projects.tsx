@@ -305,13 +305,39 @@ export default function Projects() {
                 </ul>
 
                 {/* Tags */}
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-1.5 mb-5">
                   {project.tags.map((tag) => (
                     <span key={tag} className="tech-badge text-xs">
                       {tag}
                     </span>
                   ))}
                 </div>
+
+                {/* View Website button */}
+                {project.demo && (
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-mono px-4 py-2 rounded-lg transition-all duration-200 hover:gap-3"
+                    style={{
+                      color: project.color,
+                      background: `${project.color}10`,
+                      border: `1px solid ${project.color}30`,
+                    }}
+                    onMouseEnter={e => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = `${project.color}20`;
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = `${project.color}60`;
+                    }}
+                    onMouseLeave={e => {
+                      (e.currentTarget as HTMLAnchorElement).style.background = `${project.color}10`;
+                      (e.currentTarget as HTMLAnchorElement).style.borderColor = `${project.color}30`;
+                    }}
+                  >
+                    <ExternalLink size={13} />
+                    View Website
+                  </a>
+                )}
               </div>
 
               {/* Hover glow overlay */}
